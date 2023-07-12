@@ -1,0 +1,58 @@
+<div>
+  <h1>{{"Title : "+ title}} </h1>
+  <app-navber></app-navber>
+
+
+  <img src="{{img}}" width="100%" height="400px" alt="">
+
+  <app-blogs></app-blogs>
+  <p *ngFor="let blog of blogs" class="post">{{blog}} </p>
+
+
+  <div class="nubmer">
+    <p>{{number}}</p>
+
+    <div (click)="onClicke2()">
+      <button (click)="onClick($event)">Incresase</button>
+    </div>
+
+    <button (click)="onDisrcis($event)">Decrease</button>
+
+  </div>
+
+  <div *ngFor="let blogPost of blogPosts" class="post">
+
+    <h3>Title: {{blogPost.title}}</h3>
+    <p> {{blogPost.descrpiton}}</p>
+    <p>Name : {{blogPost.autor}}</p>
+
+  </div>
+
+  <div class="form">
+    <h1>Login Form</h1>
+    <div>
+      <label for="">Name :</label>
+      <input [(ngModel)]="name" type="text" placeholder="Write your Name">
+
+    </div>
+    <div>
+      <label for="">Email :</label>
+      <input [(ngModel)]="email" type="text" placeholder="Write your email">
+    </div>
+    <div>
+      <label for="">Password</label>
+      <input [(ngModel)]="passsword" type="password" placeholder="Type your password">
+    </div>
+
+    <div class="number">
+      <button (click)="onSave()" class="">Login</button>
+    </div>
+
+    <p>Name:{{name}}</p>
+    <p>Email:{{email}}</p>
+    <p>Password:{{passsword}}</p>
+  </div>
+
+
+
+</div>
